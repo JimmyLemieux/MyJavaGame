@@ -128,6 +128,7 @@ public class Game extends Canvas implements Runnable {
 	//Update the data of the game (pixels etc)
 	public void tick() {
 		for(int i = 0;i<pixels.length;i++) {
+			//Manipulating the pixels based on the tick count
 			pixels[i] = tickCount * i;
 		}
 		tickCount ++;
@@ -149,6 +150,8 @@ public class Game extends Canvas implements Runnable {
 		
 		//g.setColor(Color.BLACK);
 		//g.fillRect(0, 0, WIDTH, HEIGHT);
+		
+		//Basically just drawing the image in the buffer strategy
 		
 		g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
 		
